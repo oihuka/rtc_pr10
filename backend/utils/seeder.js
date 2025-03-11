@@ -17,21 +17,21 @@ const users = [
     email: 'admin@ejemplo.com',
     password: 'password123',
     bio: 'Administrador de la plataforma de eventos',
-    avatar: 'https://res.cloudinary.com/' + process.env.CLOUDINARY_CLOUD_NAME + '/image/upload/v1740822656/rtc_p10/events/default-event.jpg'
+    avatar: 'https://res.cloudinary.com/' + process.env.CLOUDINARY_CLOUD_NAME + '/image/upload/v1741704872/rtc_p10/events/default-avatar.png'
   },
   {
     name: 'Juan Pérez',
     email: 'juan@ejemplo.com',
     password: 'password123',
     bio: 'Organizador de eventos musicales',
-    avatar: 'https://res.cloudinary.com/' + process.env.CLOUDINARY_CLOUD_NAME + '/image/upload/v1740822656/rtc_p10/events/default-event.jpg'
+    avatar: 'https://res.cloudinary.com/' + process.env.CLOUDINARY_CLOUD_NAME + '/image/upload/v1741704872/rtc_p10/events/default-avatar.png'
   },
   {
     name: 'María García',
     email: 'maria@ejemplo.com',
     password: 'password123',
     bio: 'Amante de los eventos deportivos',
-    avatar: 'https://res.cloudinary.com/' + process.env.CLOUDINARY_CLOUD_NAME + '/image/upload/v1740822656/rtc_p10/events/default-event.jpg'
+    avatar: 'https://res.cloudinary.com/' + process.env.CLOUDINARY_CLOUD_NAME + '/image/upload/v1741704872/rtc_p10/events/default-avatar.png'
   }
 ];
 
@@ -43,6 +43,7 @@ const createEvents = (users) => {
       description: 'Un increíble concierto con las mejores bandas de rock de la ciudad.',
       location: 'Estadio Municipal',
       date: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7 días en el futuro
+      price: 25.99,
       category: 'Música',
       creator: users[0]._id,
       attendees: [users[1]._id, users[2]._id],
@@ -53,6 +54,7 @@ const createEvents = (users) => {
       description: 'Participa en el torneo de fútbol más grande de la temporada.',
       location: 'Complejo Deportivo Norte',
       date: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000), // 14 días en el futuro
+      price: 15.50,
       category: 'Deportes',
       creator: users[1]._id,
       attendees: [users[0]._id],
@@ -63,6 +65,7 @@ const createEvents = (users) => {
       description: 'Descubre las obras de los artistas contemporáneos más destacados.',
       location: 'Galería Central',
       date: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000), // 3 días en el futuro
+      price: 10.00,
       category: 'Arte',
       creator: users[2]._id,
       attendees: [users[0]._id, users[1]._id],
@@ -73,6 +76,7 @@ const createEvents = (users) => {
       description: 'Aprende sobre las últimas tendencias en tecnología y desarrollo.',
       location: 'Centro de Convenciones',
       date: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000), // 10 días en el futuro
+      price: 50.00,
       category: 'Tecnología',
       creator: users[0]._id,
       attendees: [users[2]._id],
@@ -83,6 +87,7 @@ const createEvents = (users) => {
       description: 'Degusta los mejores platos de la cocina internacional.',
       location: 'Plaza Mayor',
       date: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000), // 5 días en el futuro
+      price: 35.75,
       category: 'Gastronomía',
       creator: users[1]._id,
       attendees: [users[0]._id, users[2]._id],

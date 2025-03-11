@@ -20,9 +20,14 @@ const EventSchema = new mongoose.Schema({
     type: Date,
     required: [true, 'Por favor ingrese una fecha para el evento']
   },
+  price: {
+    type: Number,
+    required: [true, 'Por favor ingrese un precio para el evento'],
+    default: 0
+  },
   image: {
     type: String,
-    default: 'https://res.cloudinary.com/'+process.env.CLOUDINARY_CLOUD_NAME+'/image/upload/v1/events/default-event.jpg'
+    default: 'https://res.cloudinary.com/' + process.env.CLOUDINARY_CLOUD_NAME + '/image/upload/v1740822656/rtc_p10/events/default-event.jpg'
   },
   category: {
     type: String,
