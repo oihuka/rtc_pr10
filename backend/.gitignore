@@ -1,0 +1,26 @@
+# Dependencias
+node_modules/
+package-lock.json
+
+# Archivos de entorno
+.env
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Directorios de uploads
+uploads/*
+!uploads/.gitkeep
+
+# Archivos de cobertura
+coverage/
+
+# Archivos temporales
+tmp/
+temp/
