@@ -85,7 +85,7 @@ El proyecto está configurado para ser desplegado en Vercel, con archivos de con
 ### URLs de Despliegue
 
 - Backend: https://rtc-pr10-eventhub-api.vercel.app/api
-- Frontend:
+- Frontend: https://rtc-pr10-eventhub.vercel.app/
 
 ## Características Principales
 
