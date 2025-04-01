@@ -1,0 +1,597 @@
+/* Estilos para los componentes de eventos */
+
+/* Filtros de eventos */
+.filters-container {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.filters-form {
+  padding: 0;
+}
+
+.filters-header {
+  padding: 20px 25px;
+  border-bottom: 1px solid var(--color-light);
+  text-align: center;
+}
+
+.filters-header h3 {
+  margin-bottom: 8px;
+  color: var(--color-dark);
+  font-size: 1.5rem;
+}
+
+.filters-header p {
+  color: var(--color-gray);
+  margin-bottom: 0;
+}
+
+.filters-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 25px;
+  border-bottom: 1px solid var(--color-light);
+}
+
+.filters-search,
+.filters-date {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filter-group {
+  margin-bottom: 0;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--color-dark);
+  font-size: 0.9rem;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gray);
+}
+
+.input-with-icon input,
+.input-with-icon select {
+  padding-left: 35px;
+}
+
+.filters-quick {
+  display: flex;
+  gap: 10px;
+  padding: 15px 25px;
+  border-bottom: 1px solid var(--color-light);
+  flex-wrap: wrap;
+}
+
+.filters-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 25px;
+  background-color: var(--color-light);
+  align-items: center;
+}
+
+.filters-advanced {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 25px;
+  border-top: 1px solid var(--color-light);
+  background-color: var(--color-light);
+}
+
+.toggle-advanced {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.toggle-advanced .hide-advanced {
+  display: none;
+}
+
+.toggle-advanced.active .show-advanced {
+  display: none;
+}
+
+.toggle-advanced.active .hide-advanced {
+  display: inline-flex;
+}
+
+@media (max-width: 992px) {
+  .filters-main {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-advanced {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .filters-actions button {
+    width: 100%;
+  }
+
+  .filters-advanced {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tarjetas de eventos */
+.event-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.event-card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.event-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.event-card:hover .event-card-image img {
+  transform: scale(1.05);
+}
+
+.event-card-category {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.event-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.event-card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--color-dark);
+}
+
+.event-card-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: var(--color-gray);
+}
+
+.event-card-description {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: var(--color-dark);
+  flex-grow: 1;
+}
+
+.event-card-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.event-card-price i {
+  margin-right: 5px;
+  font-size: 1rem;
+}
+
+.event-card-creator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.event-card-creator-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.event-card-creator-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-card-creator-name {
+  font-size: 0.85rem;
+  color: var(--color-gray);
+}
+
+.event-card-attendees {
+  font-size: 0.85rem;
+  color: var(--color-gray);
+  margin-bottom: 15px;
+}
+
+.event-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Grid de eventos */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Detalles de evento */
+.event-details {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.event-details-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.event-details-image {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.event-details-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-details-category {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.event-details-info {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-details-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--color-dark);
+}
+
+.event-details-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.event-details-meta-item {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.event-details-meta-item i {
+  color: var(--color-primary);
+  margin-right: 10px;
+  font-size: 1.2rem;
+  width: 25px;
+  text-align: center;
+}
+
+.event-details-creator {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+  padding: 15px;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+}
+
+.event-details-creator-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.event-details-creator-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-details-creator-info p {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  margin-bottom: 5px;
+}
+
+.event-details-creator-info h3 {
+  font-size: 1.1rem;
+  color: var(--color-dark);
+}
+
+.event-details-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 15px;
+}
+
+.event-details-content {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.event-details-description h2,
+.event-details-attendees h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--color-dark);
+}
+
+.event-details-description p {
+  line-height: 1.8;
+  color: var(--color-dark);
+  white-space: pre-line;
+}
+
+.attendees-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.attendee-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.attendee-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.attendee-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.attendee-name {
+  display: none;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-dark);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.attendee-item:hover .attendee-name {
+  display: block;
+}
+
+.attendee-item:hover .attendee-avatar {
+  transform: scale(1.1);
+}
+
+@media (max-width: 992px) {
+  .event-details-header {
+    grid-template-columns: 1fr;
+  }
+
+  .event-details-image {
+    height: 300px;
+  }
+
+  .event-details-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-details-title {
+    font-size: 1.8rem;
+  }
+
+  .event-details-info,
+  .event-details-content {
+    padding: 20px;
+  }
+}
+
+/* Mensaje de no eventos */
+.no-events {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.no-events i {
+  font-size: 3rem;
+  color: var(--color-gray);
+  margin-bottom: 15px;
+}
+
+.no-events h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--color-dark);
+}
+
+.no-events p {
+  color: var(--color-gray);
+  margin-bottom: 10px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.date-input {
+  position: relative;
+  font-family: var(--font-family);
+  color: var(--color-dark);
+}
+
+.date-input::placeholder {
+  color: var(--color-gray);
+  opacity: 1;
+}
+
+/* Estilos para el icono del calendario */
+.date-group .input-with-icon i {
+  color: var(--color-primary);
+}
+
+/* Asegurar que el placeholder se muestre en Firefox */
+.date-input::-moz-placeholder {
+  color: var(--color-gray);
+  opacity: 1;
+}
+
+/* Asegurar que el placeholder se muestre en Chrome */
+.date-input::-webkit-input-placeholder {
+  color: var(--color-gray);
+  opacity: 1;
+}
+
+/* Modificar la apariencia del input date en Chrome */
+.date-input::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+/* Modificar la apariencia del input date en Firefox */
+.date-input::-moz-calendar-picker-indicator {
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Asegurar que el input date muestre el formato correcto */
+.date-input::before {
+  content: attr(data-date-format);
+  color: var(--color-gray);
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.date-input:valid::before,
+.date-input:focus::before {
+  display: none;
+}
+
+/* Asegurar que el input tenga el padding correcto */
+.input-with-icon .date-input {
+  padding-left: 35px;
+  padding-right: 10px;
+}

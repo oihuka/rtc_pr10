@@ -1,0 +1,230 @@
+/* Estilos para el componente Header */
+.main-header {
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow);
+  padding: var(--spacing-md, 1rem) 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  color: var(--color-dark);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: var(--spacing-sm, 0.5rem);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 0 var(--spacing-xl, 2rem);
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: var(--spacing-md, 1rem);
+}
+
+.nav-link {
+  color: var(--color-dark);
+  font-weight: 500;
+  padding: var(--spacing-sm, 0.5rem) var(--spacing-md, 1rem);
+  border-radius: var(--border-radius);
+  transition: all var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.user-menu {
+  position: relative;
+  margin-left: var(--spacing-md, 1rem);
+}
+
+.user-menu-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: var(--spacing-sm, 0.5rem);
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition);
+  background: none;
+  border: none;
+}
+
+.user-menu-button:hover {
+  background-color: var(--color-light);
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: var(--spacing-sm, 0.5rem);
+}
+
+.user-name {
+  margin-right: var(--spacing-sm, 0.5rem);
+  font-weight: 500;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--spacing-sm, 0.5rem) 0;
+  margin-top: var(--spacing-sm, 0.5rem);
+  display: none;
+  z-index: 1000;
+}
+
+.user-menu.active .user-dropdown {
+  display: block;
+}
+
+.user-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-dropdown li {
+  margin: 0;
+}
+
+.user-dropdown a,
+.user-dropdown button {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-sm, 0.5rem) var(--spacing-md, 1rem);
+  color: var(--color-dark);
+  text-decoration: none;
+  transition: background-color var(--transition);
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.user-dropdown a:hover,
+.user-dropdown button:hover {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+}
+
+.user-dropdown i {
+  margin-right: var(--spacing-sm, 0.5rem);
+  width: 16px;
+  text-align: center;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-dark);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: var(--color-white);
+  padding: var(--spacing-md, 1rem) 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav-item {
+  margin: var(--spacing-xs, 0.25rem) 0;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-md, 1rem);
+  color: var(--color-dark);
+  text-decoration: none;
+  transition: background-color var(--transition);
+  border-radius: var(--border-radius);
+}
+
+.mobile-nav-link:hover {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-name {
+    display: none;
+  }
+}
+
+/* Añadir separación entre botones de autenticación */
+.header-actions .btn + .btn,
+.mobile-menu .btn + .btn,
+a.btn + a.btn {
+  margin-left: 10px; /* Espacio entre botones */
+}

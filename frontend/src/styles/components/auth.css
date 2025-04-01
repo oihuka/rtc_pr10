@@ -1,0 +1,201 @@
+/* Estilos para los componentes de autenticación */
+
+/* Formularios */
+.form-container {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-title {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: var(--color-dark);
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 1rem;
+  color: var(--color-gray);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--color-dark);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 107, 255, 0.2);
+}
+
+.form-control.error {
+  border-color: var(--color-danger);
+}
+
+.form-error {
+  color: var(--color-danger);
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.form-text {
+  font-size: 0.85rem;
+  color: var(--color-gray);
+  margin-top: 5px;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-check-input {
+  margin-right: 10px;
+}
+
+.form-check-label {
+  font-size: 0.95rem;
+  color: var(--color-dark);
+}
+
+.form-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-link {
+  color: var(--color-primary);
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.form-link:hover {
+  text-decoration: underline;
+}
+
+.form-divider {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+  color: var(--color-gray);
+  font-size: 0.9rem;
+}
+
+.form-divider::before,
+.form-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.form-divider::before {
+  margin-right: 15px;
+}
+
+.form-divider::after {
+  margin-left: 15px;
+}
+
+/* Perfil de usuario */
+.profile-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+.profile-sidebar {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 30px;
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--color-dark);
+}
+
+.profile-email {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  margin-bottom: 20px;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.profile-stat {
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+  padding: 15px;
+}
+
+.profile-stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.profile-stat-label {
+  font-size: 0.85rem;
+  color: var(--color-gray);
+}
+
+.profile-content {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+}
